@@ -1,59 +1,66 @@
 <!DOCTYPE html>
 <html lang="de-de">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body class="layout-reverse">
+<body class="layout-reverse">
 
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
-    <div class="wrap">
-      <div class="masthead">
+<!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+     content to avoid any CSS collisions with our real content. -->
+<div class="wrap">
+    <div class="masthead">
         <div class="container">
-          <h3 class="masthead-title">
-            <a href="/" title="Blog">{{ site.title }};</a> <small>#{{ site.tagline }}</small>
-          </h3>
+            <h3 class="masthead-title">
+                <a href="/" title="Blog">{{ site.title }};</a>
+                <small>#{{ site.tagline }}</small>
+            </h3>
         </div>
-      </div>
-
-      <div class="container content">
-        {{ content }}
-      </div>
-
-
     </div>
 
-    {% include sidebar.html %}
-
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-
+    <div class="container content">
+        {{ content }}
+    </div>
 
 
+</div>
 
-    <script>
-      (function(document) {
+{% include sidebar.html %}
+
+<label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+
+<script>
+    (function (document) {
         var toggle = document.querySelector('.sidebar-toggle');
         var sidebar = document.querySelector('#sidebar');
         var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+            var target = e.target;
 
-        document.addEventListener('click', function(e) {
-          var target = e.target;
+            if (!checkbox.checked ||
+                    sidebar.contains(target) ||
+                    (target === checkbox || target === toggle)) return;
 
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-
-          checkbox.checked = false;
+            checkbox.checked = false;
         }, false);
 
         // random veggie
-        try {
-          var veggies = ['salat', 'tomate', 'karotte'];
-          var imgUrl ='/public/images/' + veggies[Math.floor(Math.random()*veggies.length)] + '.png';
-          document.querySelector('.masthead-title').style.background="url('"+imgUrl+"') no-repeat";
-        } catch (e) {}
-      })(document);
-    </script>
-  </body>
+        var masthead = document.querySelector('.masthead-title');
+        masthead.addEventListener('mouseover', function (e) {
+            try {
+                var veggies = ['tomate', 'karotte'];
+                var imgUrl = '/public/images/' + veggies[Math.floor(Math.random() * veggies.length)] + '.png';
+                masthead.style.backgroundImage = "url('" + imgUrl + "')";
+            } catch (e) {
+            }
+        });
+        masthead.addEventListener('mouseout', function (e) {
+            try {
+                masthead.style.backgroundImage = "url('/public/images/salat.png')";
+            } catch (e) {
+            }
+        });
+    })(document);
+</script>
+</body>
 </html>
