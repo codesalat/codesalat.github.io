@@ -1,16 +1,16 @@
 /*
- *  ___
- * /\_ \
- * \//\ \      __      ___   __  __    ___     ___
- *   \ \ \   /'__`\  /' _ `\/\ \/\ \  / __`\ /' _ `\
- *    \_\ \_/\ \_\.\_/\ \/\ \ \ \_\ \/\ \_\ \/\ \/\ \
- *    /\____\ \__/.\_\ \_\ \_\/`____ \ \____/\ \_\ \_\
- *    \/____/\/__/\/_/\/_/\/_/`/___/> \/___/  \/_/\/_/
- *                               /\___/
- *                               \/__/
  *
- * Designed, built, and released under MIT license by @mdo. Learn more at
- * https://github.com/poole/lanyon.
+ *                  __                           ___             __
+ *                 /\ \                         /\_ \           /\ \__
+ *    ___    ___   \_\ \     __    ____     __  \//\ \      __  \ \ ,_\
+ *  /'___\ / __`\  /'_` \  /'__`\ /',__\  /'__`\  \ \ \   /'__`\ \ \ \/
+ * /\ \__//\ \L\ \/\ \L\ \/\  __//\__, `\/\ \L\.\_ \_\ \_/\ \L\.\_\ \ \_
+ * \ \____\ \____/\ \___,_\ \____\/\____/\ \__/.\_\/\____\ \__/.\_\\ \__\
+ * \/____/\/___/  \/__,_ /\/____/\/___/  \/__/\/_/\/____/\/__/\/_/ \/__/
+ *
+ * Based on https://github.com/poole/lanyon.
+ * Designed, built, and released under MIT license by @mdo.
+ * Btw: 1000 Dank.
  */
 
 
@@ -38,19 +38,30 @@
 html,
 body {
   overflow-x: hidden;
+  background-color: #f5f5f5;
 }
 
 html {
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: "Minion Pro", Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "Adelle", Georgia, "Times New Roman", serif;
   font-weight: 400;
   color: #313131;
   letter-spacing: -.025rem;
 }
 
+/* Some special pepper */
+
+.message, pre, code {
+  background-color: #e5e5e5;
+}
+
+hr {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #f4f4f4;
+}
 
 /*
  * Wrapper
@@ -103,12 +114,17 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0;
   color: #505050;
+  background-image: url('../images/salat.png');
+  background-repeat: no-repeat;
+  padding: 5px 0px 10px 50px;
+  margin-left: -50px;
+  font-weight: 700;
 }
 .masthead-title a {
   color: #505050;
 }
 .masthead-title small {
-  font-size: 75%;
+  font-size: 100%;
   font-weight: 400;
   color: #c0c0c0;
   letter-spacing: 0;
@@ -148,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "Adelle", Georgia, "Times New Roman", serif;
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
@@ -214,7 +230,7 @@ a.sidebar-nav-item:focus {
   width: 2.2rem;
   padding: .5rem .65rem;
   color: #505050;
-  background-color: #fff;
+  background-color: #f5f5f5;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -314,11 +330,12 @@ a.sidebar-nav-item:focus {
 }
 
 /* Meta data line below post title */
-.post-date {
-  display: block;
+.post-meta, .post-author, .post-date {
+  display: inline-block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
   color: #9a9a9a;
+  font-family: "Adelle", Georgia, "Times New Roman", serif;
 }
 
 /* Related posts */
@@ -358,7 +375,7 @@ a.sidebar-nav-item:focus {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "Adelle", Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;
 }
