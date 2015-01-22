@@ -48,7 +48,7 @@
         var masthead = document.querySelector('.masthead-title');
         masthead.addEventListener('mouseover', function (e) {
             try {
-                var veggies = ['tomate', 'karotte'];
+                var veggies = ['tomate', 'karotte', 'artischocke', 'aubergine', 'brokkoli', 'chili', 'gelbezucchini', 'gurke', 'kartoffeln', 'knoblauch', 'kuerbis', 'lauch', 'lemone', 'mais', 'pfeffer', 'pilz', 'radieschen', 'rettich', 'rotebeete', 'spargel', 'spinat', 'zitrone', 'zucchini', 'zwiebel'];
                 var imgUrl = '/public/images/' + veggies[Math.floor(Math.random() * veggies.length)] + '.png';
                 masthead.style.backgroundImage = "url('" + imgUrl + "')";
             } catch (e) {
