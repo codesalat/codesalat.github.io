@@ -56,6 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .message, pre, code {
   background-color: #e5e5e5;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 hr {
@@ -109,6 +110,9 @@ hr {
   padding-bottom: 1rem;
   margin-bottom: 3rem;
   border-bottom: 1px solid #eee;
+}
+.masthead h3 {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 .masthead-title {
   margin-top: 0;
